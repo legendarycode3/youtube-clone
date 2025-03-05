@@ -1,0 +1,228 @@
+/* .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.left-section {
+    width: 150px;
+    background-color: aqua;
+}
+
+.middle-section {
+    background-color: blue;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 30px;
+    max-width: 500px;
+}
+
+.right-section {
+    background-color: aquamarine;
+    width: 200px;
+} */
+ 
+
+
+.header {
+    display: flex;
+    height: 55px;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    /* background-color: lightblue;
+    width: 150px; */
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.youtube-logo {
+    height: 20px;
+}
+
+
+
+
+
+.middle-section {
+    /* to stretch the middle one  */
+    flex: 1; 
+    margin-left: 70px;
+    margin-right: 30px;
+    max-width: 500px; 
+    /* max-width: to stop increasing after 299px */
+    display: flex;
+    align-items: center;
+} 
+
+.input-searchbar {
+    flex: 1;
+    /* height: 34px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(197, 186, 186);
+    padding-left: 10px;
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    /* Set "width"  so the input search bar will shrink */
+    width: 0;
+}
+
+/* This is how you target the placeholder on an input element like this */
+.input-searchbar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.search-button {
+    height: 40px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    margin-left: -1;
+    margin-right: 10px;
+
+    /* position: relative; */
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notification-icon-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notification-icon-container .tooltip
+ {
+    font-family: Roboto, Arial;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 12px;
+    border-radius: 2px;
+    bottom: -30px;
+    cursor: pointer;
+    
+    /* tooltip hovering disabled none */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notification-icon-container:hover .tooltip
+ {
+    opacity: 1;  
+}
+
+.search-icon {
+    height: 25px;
+    /* margin-top: 4px; */
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+
+
+
+.voice-search-icon {
+    height: 24px;
+    /* margin-top: 4px; */
+}
+
+
+
+.right-section {
+    /* background-color: lightblue; */
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+
+    /* To prevent the right section from shrinking */
+    flex-shrink: 0;
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.youtube-apps-icon {
+    height: 24px;
+}
+
+.notification-icon {
+    height: 24px; 
+}
+
+.account-prof-image {
+    height: 32px;
+    border-radius: 16px;
+}
+
+.notification-icon-container {
+    position: relative;
+}
+
+
+.notification-count { 
+    position: absolute;
+    top: -2px; 
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    font-family: Roboto,Arial;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
